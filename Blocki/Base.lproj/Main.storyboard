@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="15702" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15702"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15705"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -707,14 +707,14 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="Blocki" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" misplaced="YES" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="354" height="85"/>
+                        <rect key="frame" x="0.0" y="0.0" width="249" height="141"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zJm-OK-x51">
-                                <rect key="frame" x="8" y="8" width="338" height="69"/>
+                                <rect key="frame" x="8" y="8" width="233" height="127"/>
                                 <subviews>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Mph-Zm-u6C">
-                                        <rect key="frame" x="-2" y="53" width="156" height="16"/>
+                                        <rect key="frame" x="-2" y="111" width="156" height="16"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Extension is not enabled." id="kB7-ma-51e">
                                             <font key="font" usesAppearanceFont="YES"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -722,57 +722,62 @@
                                         </textFieldCell>
                                     </textField>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="K8l-yf-jGQ">
-                                        <rect key="frame" x="-2" y="29" width="54" height="16"/>
+                                        <rect key="frame" x="-2" y="87" width="54" height="16"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" id="mmm-d8-YrB">
                                             <font key="font" metaFont="system"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                         </textFieldCell>
                                     </textField>
-                                    <stackView distribution="fillEqually" orientation="horizontal" alignment="top" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ujw-7Z-O5f">
-                                        <rect key="frame" x="0.0" y="0.0" width="338" height="21"/>
-                                        <subviews>
-                                            <button verticalHuggingPriority="750" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2v8-CA-Zyx">
-                                                <rect key="frame" x="-6" y="-7" width="138" height="32"/>
-                                                <buttonCell key="cell" type="push" title="Refresh state" bezelStyle="rounded" image="NSRefreshTemplate" imagePosition="leading" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ozt-NR-Tff">
-                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                    <font key="font" metaFont="system"/>
-                                                </buttonCell>
-                                                <connections>
-                                                    <action selector="refreshStateAction:" target="XfG-lQ-9wD" id="eO0-P8-e15"/>
-                                                </connections>
-                                            </button>
-                                            <button verticalHuggingPriority="750" imageHugsTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="GOI-SO-XgN">
-                                                <rect key="frame" x="128" y="-7" width="216" height="32"/>
-                                                <buttonCell key="cell" type="push" title="Reload blocklist from disk" bezelStyle="rounded" image="NSRefreshFreestandingTemplate" imagePosition="leading" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Kb5-C4-hue">
-                                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                                    <font key="font" metaFont="system"/>
-                                                </buttonCell>
-                                                <connections>
-                                                    <action selector="reloadExtensionAction:" target="XfG-lQ-9wD" id="llA-ut-qo6"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <visibilityPriorities>
-                                            <integer value="1000"/>
-                                            <integer value="1000"/>
-                                        </visibilityPriorities>
-                                        <customSpacing>
-                                            <real value="3.4028234663852886e+38"/>
-                                            <real value="3.4028234663852886e+38"/>
-                                        </customSpacing>
-                                    </stackView>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2v8-CA-Zyx">
+                                        <rect key="frame" x="-6" y="51" width="245" height="32"/>
+                                        <buttonCell key="cell" type="push" title="Refresh state" bezelStyle="rounded" image="NSRefreshTemplate" imagePosition="leading" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ozt-NR-Tff">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="refreshStateAction:" target="XfG-lQ-9wD" id="eO0-P8-e15"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rZY-S9-Gc3">
+                                        <rect key="frame" x="-6" y="22" width="245" height="32"/>
+                                        <buttonCell key="cell" type="push" title="Edit blocklist" bezelStyle="rounded" image="NSActionTemplate" imagePosition="leading" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="wf3-5m-pCp">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="editBlocklist:" target="XfG-lQ-9wD" id="oyu-BV-JAm"/>
+                                        </connections>
+                                    </button>
+                                    <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="GOI-SO-XgN">
+                                        <rect key="frame" x="-6" y="-7" width="245" height="32"/>
+                                        <buttonCell key="cell" type="push" title="Reload blocklist from disk" bezelStyle="rounded" image="NSRefreshFreestandingTemplate" imagePosition="leading" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Kb5-C4-hue">
+                                            <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                            <font key="font" metaFont="system"/>
+                                        </buttonCell>
+                                        <connections>
+                                            <action selector="reloadExtensionAction:" target="XfG-lQ-9wD" id="llA-ut-qo6"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="trailing" secondItem="ujw-7Z-O5f" secondAttribute="trailing" id="Xci-dq-o1t"/>
-                                    <constraint firstItem="ujw-7Z-O5f" firstAttribute="leading" secondItem="zJm-OK-x51" secondAttribute="leading" id="sJF-6i-YEp"/>
+                                    <constraint firstItem="rZY-S9-Gc3" firstAttribute="leading" secondItem="zJm-OK-x51" secondAttribute="leading" id="LDW-kI-CQz"/>
+                                    <constraint firstItem="2v8-CA-Zyx" firstAttribute="leading" secondItem="zJm-OK-x51" secondAttribute="leading" id="NAy-VP-dWm"/>
+                                    <constraint firstItem="GOI-SO-XgN" firstAttribute="leading" secondItem="zJm-OK-x51" secondAttribute="leading" id="QkZ-uY-JCI"/>
+                                    <constraint firstAttribute="trailing" secondItem="2v8-CA-Zyx" secondAttribute="trailing" id="Wv9-Sm-cQx"/>
+                                    <constraint firstAttribute="trailing" secondItem="rZY-S9-Gc3" secondAttribute="trailing" id="qbt-j5-fZH"/>
+                                    <constraint firstAttribute="trailing" secondItem="GOI-SO-XgN" secondAttribute="trailing" id="t0H-ec-b1x"/>
                                 </constraints>
                                 <visibilityPriorities>
                                     <integer value="1000"/>
                                     <integer value="1000"/>
                                     <integer value="1000"/>
+                                    <integer value="1000"/>
+                                    <integer value="1000"/>
                                 </visibilityPriorities>
                                 <customSpacing>
+                                    <real value="3.4028234663852886e+38"/>
+                                    <real value="3.4028234663852886e+38"/>
                                     <real value="3.4028234663852886e+38"/>
                                     <real value="3.4028234663852886e+38"/>
                                     <real value="3.4028234663852886e+38"/>
@@ -793,10 +798,11 @@
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="74" y="618"/>
+            <point key="canvasLocation" x="21.5" y="624.5"/>
         </scene>
     </scenes>
     <resources>
+        <image name="NSActionTemplate" width="14" height="14"/>
         <image name="NSRefreshFreestandingTemplate" width="14" height="14"/>
         <image name="NSRefreshTemplate" width="11" height="15"/>
     </resources>

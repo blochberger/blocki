@@ -37,12 +37,14 @@ class ViewController: NSViewController {
 				DispatchQueue.main.async {
 					self.signal(error: error)
 				}
-			}
+            } else {
+                self.refreshState()
+            }
 		}
 	}
 
 	func refreshState() {
-		SFContentBlockerManager.getStateOfContentBlocker(withIdentifier: Blocki.extensionIdentifier) {
+        SFContentBlockerManager.getStateOfContentBlocker(withIdentifier: Blocki.extensionIdentifier) {
 			(optionalState, optionalError) in
 
 			if let error = optionalError {
@@ -64,7 +66,11 @@ class ViewController: NSViewController {
 		}
 	}
 
-	// MARK: NSViewController
+    @IBAction func editBlocklist(_ sender: NSButton) {
+        NSWorkspace.shared.open(Blocki.blockerListUrl)
+    }
+
+    // MARK: NSViewController
 
 	override func viewDidLoad() {
 		super.viewDidLoad()

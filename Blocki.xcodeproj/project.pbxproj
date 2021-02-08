@@ -18,6 +18,7 @@
 		F34DD83B25CD99CE00D73794 /* Blocki.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6079F3BF23D07ADC00B735B2 /* Blocki.swift */; };
 		F34DD83C25CD99DD00D73794 /* BlockiKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6079F3B223D07AC400B735B2 /* BlockiKit.framework */; };
 		F34DD83D25CD99DD00D73794 /* BlockiKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6079F3B223D07AC400B735B2 /* BlockiKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F3A8608825D115660044CB38 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6079F39D23D07A8800B735B2 /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +96,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3A8608825D115660044CB38 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

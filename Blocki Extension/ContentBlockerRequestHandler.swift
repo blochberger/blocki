@@ -3,7 +3,10 @@ import Foundation
 class ContentBlockerRequestHandler: NSObject, NSExtensionRequestHandling {
 
     func beginRequest(with context: NSExtensionContext) {
-        let attachment = NSItemProvider(contentsOf: Blocki.blockerListUrl)!
+        guard let attachment = NSItemProvider(contentsOf: Blocki.blockerListUrl) else {
+            context.cancelRequest(withError: BlockiError.blockListNotAvailable)
+            return
+        }
 
         let item = NSExtensionItem()
         item.attachments = [attachment]

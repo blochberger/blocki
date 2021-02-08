@@ -1,5 +1,9 @@
 import Foundation
 
+public enum BlockiError: Error {
+    case blockListNotAvailable
+}
+
 public class Blocki {
 
 	/// - TODO: Find value programmatically.

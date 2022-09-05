@@ -7,5 +7,3 @@ FOUNDATION_EXPORT double BlockiKitVersionNumber;
 FOUNDATION_EXPORT const unsigned char BlockiKitVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <BlockiKit/PublicHeader.h>
-
-

@@ -1,10 +1,10 @@
 import Foundation
 
-public enum BlockiError: Error {
-    case blockListNotAvailable
-}
-
 public class Blocki {
+
+	public enum Error: Swift.Error {
+		case blockListNotAvailable
+	}
 
 	/// - TODO: Find value programmatically.
 	public static let extensionIdentifier = "io.github.blochberger.Blocki.Extension"

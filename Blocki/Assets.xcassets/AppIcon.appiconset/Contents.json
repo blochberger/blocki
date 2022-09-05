@@ -1,58 +1,68 @@
 {
   "images" : [
     {
+      "filename" : "streamlinehq-u+1f645--smiley-&-people-250-ico_gimm0ippklfmmtc8-edited-16.png",
       "idiom" : "mac",
-      "size" : "16x16",
-      "scale" : "1x"
+      "scale" : "1x",
+      "size" : "16x16"
     },
     {
+      "filename" : "streamlinehq-u+1f645--smiley-&-people-250-ico_gimm0ippklfmmtc8-edited-32.png",
       "idiom" : "mac",
-      "size" : "16x16",
-      "scale" : "2x"
+      "scale" : "2x",
+      "size" : "16x16"
     },
     {
+      "filename" : "streamlinehq-u+1f645--smiley-&-people-250-ico_giMm0IppklfMmtc8-32.png",
       "idiom" : "mac",
-      "size" : "32x32",
-      "scale" : "1x"
+      "scale" : "1x",
+      "size" : "32x32"
     },
     {
+      "filename" : "streamlinehq-u+1f645--smiley-&-people-250-ico_giMm0IppklfMmtc8-64.png",
       "idiom" : "mac",
-      "size" : "32x32",
-      "scale" : "2x"
+      "scale" : "2x",
+      "size" : "32x32"
     },
     {
+      "filename" : "streamlinehq-u+1f645--smiley-&-people-250-ico_giMm0IppklfMmtc8-128.png",
       "idiom" : "mac",
-      "size" : "128x128",
-      "scale" : "1x"
+      "scale" : "1x",
+      "size" : "128x128"
     },
     {
+      "filename" : "streamlinehq-u+1f645--smiley-&-people-250-ico_giMm0IppklfMmtc8-256.png",
       "idiom" : "mac",
-      "size" : "128x128",
-      "scale" : "2x"
+      "scale" : "2x",
+      "size" : "128x128"
     },
     {
+      "filename" : "streamlinehq-u+1f645--smiley-&-people-250-ico_giMm0IppklfMmtc8-257.png",
       "idiom" : "mac",
-      "size" : "256x256",
-      "scale" : "1x"
+      "scale" : "1x",
+      "size" : "256x256"
     },
     {
+      "filename" : "streamlinehq-u+1f645--smiley-&-people-250-ico_giMm0IppklfMmtc8-512.png",
       "idiom" : "mac",
-      "size" : "256x256",
-      "scale" : "2x"
+      "scale" : "2x",
+      "size" : "256x256"
     },
     {
+      "filename" : "streamlinehq-u+1f645--smiley-&-people-250-ico_giMm0IppklfMmtc8-513.png",
       "idiom" : "mac",
-      "size" : "512x512",
-      "scale" : "1x"
+      "scale" : "1x",
+      "size" : "512x512"
     },
     {
+      "filename" : "streamlinehq-u+1f645--smiley-&-people-250-ico_giMm0IppklfMmtc8-1024.png",
       "idiom" : "mac",
-      "size" : "512x512",
-      "scale" : "2x"
+      "scale" : "2x",
+      "size" : "512x512"
     }
   ],
   "info" : {
-    "version" : 1,
-    "author" : "xcode"
+    "author" : "xcode",
+    "version" : 1
   }
 }

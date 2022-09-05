@@ -18,6 +18,7 @@
 		F34DD83B25CD99CE00D73794 /* Blocki.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6079F3BF23D07ADC00B735B2 /* Blocki.swift */; };
 		F34DD83C25CD99DD00D73794 /* BlockiKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6079F3B223D07AC400B735B2 /* BlockiKit.framework */; };
 		F34DD83D25CD99DD00D73794 /* BlockiKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6079F3B223D07AC400B735B2 /* BlockiKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F38F08BF28C6890800E09E53 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = F38F08BE28C6890800E09E53 /* Credits.rtf */; };
 		F3A8608825D115660044CB38 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6079F39D23D07A8800B735B2 /* Cocoa.framework */; };
 /* End PBXBuildFile section */
 
@@ -81,6 +82,7 @@
 		6079F3B423D07AC400B735B2 /* BlockiKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockiKit.h; sourceTree = "<group>"; };
 		6079F3B523D07AC400B735B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6079F3BF23D07ADC00B735B2 /* Blocki.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blocki.swift; sourceTree = "<group>"; };
+		F38F08BE28C6890800E09E53 /* Credits.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +136,7 @@
 				6079F38B23D0761900B735B2 /* Assets.xcassets */,
 				6079F39023D0761900B735B2 /* Info.plist */,
 				6079F39123D0761900B735B2 /* Blocki.entitlements */,
+				F38F08BE28C6890800E09E53 /* Credits.rtf */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -315,6 +318,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6079F38C23D0761900B735B2 /* Assets.xcassets in Resources */,
+				F38F08BF28C6890800E09E53 /* Credits.rtf in Resources */,
 				6079F38F23D0761900B735B2 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

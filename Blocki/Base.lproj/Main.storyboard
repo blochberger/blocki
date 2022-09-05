@@ -741,7 +741,7 @@
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rZY-S9-Gc3">
                                         <rect key="frame" x="-7" y="21" width="247" height="32"/>
-                                        <buttonCell key="cell" type="push" title="Edit blocklist" bezelStyle="rounded" image="NSActionTemplate" imagePosition="leading" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="wf3-5m-pCp">
+                                        <buttonCell key="cell" type="push" title="Edit blocklist" bezelStyle="rounded" image="pencil" catalog="system" imagePosition="leading" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="wf3-5m-pCp">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
@@ -751,7 +751,7 @@
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="GOI-SO-XgN">
                                         <rect key="frame" x="-7" y="-7" width="247" height="32"/>
-                                        <buttonCell key="cell" type="push" title="Reload blocklist from disk" bezelStyle="rounded" image="NSRefreshFreestandingTemplate" imagePosition="leading" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Kb5-C4-hue">
+                                        <buttonCell key="cell" type="push" title="Reload blocklist from disk" bezelStyle="rounded" image="safari" catalog="system" imagePosition="leading" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Kb5-C4-hue">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
@@ -802,8 +802,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="NSActionTemplate" width="15" height="15"/>
-        <image name="NSRefreshFreestandingTemplate" width="15" height="15"/>
         <image name="NSRefreshTemplate" width="14" height="16"/>
+        <image name="pencil" catalog="system" width="14" height="13"/>
+        <image name="safari" catalog="system" width="15" height="15"/>
     </resources>
 </document>

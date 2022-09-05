@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="15705"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="19529"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -711,10 +711,10 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <stackView distribution="fill" orientation="vertical" alignment="leading" horizontalStackHuggingPriority="249.99998474121094" verticalStackHuggingPriority="249.99998474121094" detachesHiddenViews="YES" translatesAutoresizingMaskIntoConstraints="NO" id="zJm-OK-x51">
-                                <rect key="frame" x="8" y="8" width="233" height="127"/>
+                                <rect key="frame" x="8" y="8" width="233" height="124"/>
                                 <subviews>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Mph-Zm-u6C">
-                                        <rect key="frame" x="-2" y="111" width="156" height="16"/>
+                                        <rect key="frame" x="-2" y="108" width="156" height="16"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" title="Extension is not enabled." id="kB7-ma-51e">
                                             <font key="font" usesAppearanceFont="YES"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -722,7 +722,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="K8l-yf-jGQ">
-                                        <rect key="frame" x="-2" y="87" width="54" height="16"/>
+                                        <rect key="frame" x="-2" y="84" width="54" height="16"/>
                                         <textFieldCell key="cell" lineBreakMode="clipping" id="mmm-d8-YrB">
                                             <font key="font" metaFont="system"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -730,7 +730,7 @@
                                         </textFieldCell>
                                     </textField>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2v8-CA-Zyx">
-                                        <rect key="frame" x="-6" y="51" width="245" height="32"/>
+                                        <rect key="frame" x="-7" y="49" width="247" height="32"/>
                                         <buttonCell key="cell" type="push" title="Refresh state" bezelStyle="rounded" image="NSRefreshTemplate" imagePosition="leading" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="ozt-NR-Tff">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
@@ -740,7 +740,7 @@
                                         </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rZY-S9-Gc3">
-                                        <rect key="frame" x="-6" y="22" width="245" height="32"/>
+                                        <rect key="frame" x="-7" y="21" width="247" height="32"/>
                                         <buttonCell key="cell" type="push" title="Edit blocklist" bezelStyle="rounded" image="NSActionTemplate" imagePosition="leading" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="wf3-5m-pCp">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
@@ -750,7 +750,7 @@
                                         </connections>
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="GOI-SO-XgN">
-                                        <rect key="frame" x="-6" y="-7" width="245" height="32"/>
+                                        <rect key="frame" x="-7" y="-7" width="247" height="32"/>
                                         <buttonCell key="cell" type="push" title="Reload blocklist from disk" bezelStyle="rounded" image="NSRefreshFreestandingTemplate" imagePosition="leading" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Kb5-C4-hue">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
@@ -802,8 +802,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="NSActionTemplate" width="14" height="14"/>
-        <image name="NSRefreshFreestandingTemplate" width="14" height="14"/>
-        <image name="NSRefreshTemplate" width="11" height="15"/>
+        <image name="NSActionTemplate" width="15" height="15"/>
+        <image name="NSRefreshFreestandingTemplate" width="15" height="15"/>
+        <image name="NSRefreshTemplate" width="14" height="16"/>
     </resources>
 </document>

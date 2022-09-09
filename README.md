@@ -1,6 +1,6 @@
 #  Blocki
 
-<img src="screenshot.png" alt="Screenshot of Blocki" width="549" heigth="277"/>
+<img src="screenshot.png" alt="Screenshot of Blocki" width="556" heigth="280"/>
 
 A lot of websites out there have many minor annoyances. If you visit those websites frequently it drastically can reduce your browsing experience. With Blocki, you get control back and can manually specify rules of which content you want to load.
 

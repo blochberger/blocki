@@ -727,7 +727,7 @@
                                 <subviews>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Mph-Zm-u6C">
                                         <rect key="frame" x="-2" y="108" width="182" height="16"/>
-                                        <textFieldCell key="cell" lineBreakMode="clipping" title="The Extension is not enabled." id="kB7-ma-51e">
+                                        <textFieldCell key="cell" lineBreakMode="clipping" title="The extension is not enabled." id="kB7-ma-51e">
                                             <font key="font" usesAppearanceFont="YES"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>

@@ -12,7 +12,7 @@
 		6079F38C23D0761900B735B2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6079F38B23D0761900B735B2 /* Assets.xcassets */; };
 		6079F38F23D0761900B735B2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6079F38D23D0761900B735B2 /* Main.storyboard */; };
 		6079F3A323D07A8800B735B2 /* ContentBlockerRequestHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6079F3A223D07A8800B735B2 /* ContentBlockerRequestHandler.swift */; };
-		6079F3A823D07A8800B735B2 /* Blocki Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 6079F39B23D07A8800B735B2 /* Blocki Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		6079F3A823D07A8800B735B2 /* BlockiExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 6079F39B23D07A8800B735B2 /* BlockiExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		6079F3B623D07AC400B735B2 /* BlockiKit.h in Headers */ = {isa = PBXBuildFile; fileRef = 6079F3B423D07AC400B735B2 /* BlockiKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F34DD83A25CD99CD00D73794 /* Blocki.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6079F3BF23D07ADC00B735B2 /* Blocki.swift */; };
 		F34DD83B25CD99CE00D73794 /* Blocki.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6079F3BF23D07ADC00B735B2 /* Blocki.swift */; };
@@ -46,7 +46,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
-				6079F3A823D07A8800B735B2 /* Blocki Extension.appex in Embed App Extensions */,
+				6079F3A823D07A8800B735B2 /* BlockiExtension.appex in Embed App Extensions */,
 			);
 			name = "Embed App Extensions";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -73,11 +73,11 @@
 		6079F38E23D0761900B735B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6079F39023D0761900B735B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6079F39123D0761900B735B2 /* Blocki.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Blocki.entitlements; sourceTree = "<group>"; };
-		6079F39B23D07A8800B735B2 /* Blocki Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "Blocki Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		6079F39B23D07A8800B735B2 /* BlockiExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = BlockiExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		6079F39D23D07A8800B735B2 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		6079F3A223D07A8800B735B2 /* ContentBlockerRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentBlockerRequestHandler.swift; sourceTree = "<group>"; };
 		6079F3A423D07A8800B735B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		6079F3A523D07A8800B735B2 /* Blocki_Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Blocki_Extension.entitlements; sourceTree = "<group>"; };
+		6079F3A523D07A8800B735B2 /* BlockiExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BlockiExtension.entitlements; sourceTree = "<group>"; };
 		6079F3B223D07AC400B735B2 /* BlockiKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BlockiKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6079F3B423D07AC400B735B2 /* BlockiKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockiKit.h; sourceTree = "<group>"; };
 		6079F3B523D07AC400B735B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -125,7 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				6079F3A423D07A8800B735B2 /* Info.plist */,
-				6079F3A523D07A8800B735B2 /* Blocki_Extension.entitlements */,
+				6079F3A523D07A8800B735B2 /* BlockiExtension.entitlements */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -146,7 +146,7 @@
 			children = (
 				606630E023D09C8F001AABA6 /* README.md */,
 				6079F38623D0761900B735B2 /* Blocki */,
-				6079F39F23D07A8800B735B2 /* Blocki Extension */,
+				6079F39F23D07A8800B735B2 /* BlockiExtension */,
 				6079F3B323D07AC400B735B2 /* BlockiKit */,
 				6079F39C23D07A8800B735B2 /* Frameworks */,
 				6079F38523D0761900B735B2 /* Products */,
@@ -157,7 +157,7 @@
 			isa = PBXGroup;
 			children = (
 				6079F38423D0761900B735B2 /* Blocki.app */,
-				6079F39B23D07A8800B735B2 /* Blocki Extension.appex */,
+				6079F39B23D07A8800B735B2 /* BlockiExtension.appex */,
 				6079F3B223D07AC400B735B2 /* BlockiKit.framework */,
 			);
 			name = Products;
@@ -182,13 +182,13 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		6079F39F23D07A8800B735B2 /* Blocki Extension */ = {
+		6079F39F23D07A8800B735B2 /* BlockiExtension */ = {
 			isa = PBXGroup;
 			children = (
 				606630EE23D1EAE5001AABA6 /* Supporting Files */,
 				6079F3A223D07A8800B735B2 /* ContentBlockerRequestHandler.swift */,
 			);
-			path = "Blocki Extension";
+			path = BlockiExtension;
 			sourceTree = "<group>";
 		};
 		6079F3B323D07AC400B735B2 /* BlockiKit */ = {
@@ -235,9 +235,9 @@
 			productReference = 6079F38423D0761900B735B2 /* Blocki.app */;
 			productType = "com.apple.product-type.application";
 		};
-		6079F39A23D07A8800B735B2 /* Blocki Extension */ = {
+		6079F39A23D07A8800B735B2 /* BlockiExtension */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6079F3A923D07A8800B735B2 /* Build configuration list for PBXNativeTarget "Blocki Extension" */;
+			buildConfigurationList = 6079F3A923D07A8800B735B2 /* Build configuration list for PBXNativeTarget "BlockiExtension" */;
 			buildPhases = (
 				6079F39723D07A8800B735B2 /* Sources */,
 				6079F39823D07A8800B735B2 /* Frameworks */,
@@ -247,9 +247,9 @@
 			);
 			dependencies = (
 			);
-			name = "Blocki Extension";
+			name = BlockiExtension;
 			productName = "Blocki Extension";
-			productReference = 6079F39B23D07A8800B735B2 /* Blocki Extension.appex */;
+			productReference = 6079F39B23D07A8800B735B2 /* BlockiExtension.appex */;
 			productType = "com.apple.product-type.app-extension";
 		};
 		6079F3B123D07AC400B735B2 /* BlockiKit */ = {
@@ -306,7 +306,7 @@
 			projectRoot = "";
 			targets = (
 				6079F38323D0761900B735B2 /* Blocki */,
-				6079F39A23D07A8800B735B2 /* Blocki Extension */,
+				6079F39A23D07A8800B735B2 /* BlockiExtension */,
 				6079F3B123D07AC400B735B2 /* BlockiKit */,
 			);
 		};
@@ -371,7 +371,7 @@
 /* Begin PBXTargetDependency section */
 		6079F3A723D07A8800B735B2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 6079F39A23D07A8800B735B2 /* Blocki Extension */;
+			target = 6079F39A23D07A8800B735B2 /* BlockiExtension */;
 			targetProxy = 6079F3A623D07A8800B735B2 /* PBXContainerItemProxy */;
 		};
 		F34DD83F25CD99DD00D73794 /* PBXTargetDependency */ = {
@@ -581,11 +581,11 @@
 		6079F3AA23D07A8800B735B2 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "Blocki Extension/Blocki_Extension.entitlements";
+				CODE_SIGN_ENTITLEMENTS = BlockiExtension/BlockiExtension.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q7Y592HJR8;
-				INFOPLIST_FILE = "Blocki Extension/Info.plist";
+				INFOPLIST_FILE = BlockiExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -603,11 +603,11 @@
 		6079F3AB23D07A8800B735B2 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_ENTITLEMENTS = "Blocki Extension/Blocki_Extension.entitlements";
+				CODE_SIGN_ENTITLEMENTS = BlockiExtension/BlockiExtension.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = Q7Y592HJR8;
-				INFOPLIST_FILE = "Blocki Extension/Info.plist";
+				INFOPLIST_FILE = BlockiExtension/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -704,7 +704,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		6079F3A923D07A8800B735B2 /* Build configuration list for PBXNativeTarget "Blocki Extension" */ = {
+		6079F3A923D07A8800B735B2 /* Build configuration list for PBXNativeTarget "BlockiExtension" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				6079F3AA23D07A8800B735B2 /* Debug */,

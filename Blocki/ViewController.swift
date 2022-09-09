@@ -57,8 +57,8 @@ class ViewController: NSViewController {
 			let state = optionalState!
 
 			let message = state.isEnabled
-				? NSLocalizedString("Extension is enabled.", comment: "Text indicating that the extension is enabled in Safari.")
-				: NSLocalizedString("Extension is not enabled.", comment: "Text indicating that the extension is not enabled in Safari.")
+				? NSLocalizedString("The Extension is enabled.", comment: "Text indicating that the extension is enabled in Safari.")
+				: NSLocalizedString("The Extension is not enabled.", comment: "Text indicating that the extension is not enabled in Safari.")
 
 			DispatchQueue.main.async {
 				self.signal(message: message)

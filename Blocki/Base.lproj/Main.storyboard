@@ -661,13 +661,13 @@
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="Help" systemMenu="help" id="F2S-fz-NVQ">
                                     <items>
-                                        <menuItem title="Creating a content blocker" id="Hoj-mU-HqD">
+                                        <menuItem title="Creating a content blocker…" id="Hoj-mU-HqD">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
                                                 <action selector="openContentBlockerDocumentation:" target="Voe-Tx-rLC" id="a2N-Ed-ijN"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem title="View source code on GitHub" id="h2S-od-KPV">
+                                        <menuItem title="View source code on GitHub…" id="h2S-od-KPV">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
                                                 <action selector="viewOnGithub:" target="Voe-Tx-rLC" id="Zbm-vX-XfA"/>
@@ -726,8 +726,8 @@
                                 <rect key="frame" x="8" y="8" width="233" height="124"/>
                                 <subviews>
                                     <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Mph-Zm-u6C">
-                                        <rect key="frame" x="-2" y="108" width="156" height="16"/>
-                                        <textFieldCell key="cell" lineBreakMode="clipping" title="Extension is not enabled." id="kB7-ma-51e">
+                                        <rect key="frame" x="-2" y="108" width="182" height="16"/>
+                                        <textFieldCell key="cell" lineBreakMode="clipping" title="The Extension is not enabled." id="kB7-ma-51e">
                                             <font key="font" usesAppearanceFont="YES"/>
                                             <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                                             <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
@@ -753,7 +753,7 @@
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="rZY-S9-Gc3">
                                         <rect key="frame" x="-7" y="21" width="247" height="32"/>
-                                        <buttonCell key="cell" type="push" title="Edit blocklist" bezelStyle="rounded" image="pencil" catalog="system" imagePosition="leading" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="wf3-5m-pCp">
+                                        <buttonCell key="cell" type="push" title="Edit rules…" bezelStyle="rounded" image="pencil" catalog="system" imagePosition="leading" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="wf3-5m-pCp">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>
@@ -763,7 +763,7 @@
                                     </button>
                                     <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="GOI-SO-XgN">
                                         <rect key="frame" x="-7" y="-7" width="247" height="32"/>
-                                        <buttonCell key="cell" type="push" title="Reload blocklist from disk" bezelStyle="rounded" image="safari" catalog="system" imagePosition="leading" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Kb5-C4-hue">
+                                        <buttonCell key="cell" type="push" title="Reload rules in Safari" bezelStyle="rounded" image="safari" catalog="system" imagePosition="leading" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="Kb5-C4-hue">
                                             <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                             <font key="font" metaFont="system"/>
                                         </buttonCell>

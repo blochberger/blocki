@@ -667,6 +667,12 @@
                                                 <action selector="openContentBlockerDocumentation:" target="Voe-Tx-rLC" id="a2N-Ed-ijN"/>
                                             </connections>
                                         </menuItem>
+                                        <menuItem title="View source code on GitHub" id="h2S-od-KPV">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <action selector="viewOnGithub:" target="Voe-Tx-rLC" id="Zbm-vX-XfA"/>
+                                            </connections>
+                                        </menuItem>
                                         <menuItem title="Blocki Help" keyEquivalent="?" id="FKE-Sm-Kum">
                                             <connections>
                                                 <action selector="showHelp:" target="Ady-hI-5gd" id="y7X-2Q-9no"/>

@@ -3,6 +3,10 @@ import Cocoa
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
 
+	@IBAction func openContentBlockerDocumentation(_ sender: NSMenuItem) {
+		NSWorkspace.shared.open(URL(string: "https://developer.apple.com/documentation/safariservices/creating_a_content_blocker")!)
+	}
+
 	// MARK: NSApplicationDelegate
 
 	func applicationDidFinishLaunching(_ aNotification: Notification) {

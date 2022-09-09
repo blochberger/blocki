@@ -32,6 +32,6 @@
 	<key>NSHumanReadableCopyright</key>
 	<string>Copyright © 2020 Maximilian Blochberger. All rights reserved.</string>
 	<key>NSHumanReadableDescription</key>
-	<string>Add a description of what your extension does here.</string>
+	<string>Block content based on the blocker rules you defined in Blocki.</string>
 </dict>
 </plist>

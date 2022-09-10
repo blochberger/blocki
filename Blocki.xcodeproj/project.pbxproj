@@ -20,6 +20,10 @@
 		F34DD83D25CD99DD00D73794 /* BlockiKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 6079F3B223D07AC400B735B2 /* BlockiKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F38F08BF28C6890800E09E53 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = F38F08BE28C6890800E09E53 /* Credits.rtf */; };
 		F3A8608825D115660044CB38 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6079F39D23D07A8800B735B2 /* Cocoa.framework */; };
+		F3B2492A28CCD21700562023 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F3B2492C28CCD21700562023 /* InfoPlist.strings */; };
+		F3B2493028CCD2B900562023 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F3B2493228CCD2B900562023 /* InfoPlist.strings */; };
+		F3B2493528CCD3E300562023 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = F3B2493728CCD3E300562023 /* Localizable.strings */; };
+		F3B2493A28CCD47E00562023 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F3B2493C28CCD47E00562023 /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,18 +75,23 @@
 		6079F38923D0761900B735B2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6079F38B23D0761900B735B2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6079F38E23D0761900B735B2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		6079F39023D0761900B735B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6079F39123D0761900B735B2 /* Blocki.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Blocki.entitlements; sourceTree = "<group>"; };
 		6079F39B23D07A8800B735B2 /* BlockiExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = BlockiExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
 		6079F39D23D07A8800B735B2 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		6079F3A223D07A8800B735B2 /* ContentBlockerRequestHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentBlockerRequestHandler.swift; sourceTree = "<group>"; };
-		6079F3A423D07A8800B735B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6079F3A523D07A8800B735B2 /* BlockiExtension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = BlockiExtension.entitlements; sourceTree = "<group>"; };
 		6079F3B223D07AC400B735B2 /* BlockiKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = BlockiKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		6079F3B423D07AC400B735B2 /* BlockiKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockiKit.h; sourceTree = "<group>"; };
 		6079F3B523D07AC400B735B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6079F3BF23D07ADC00B735B2 /* Blocki.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blocki.swift; sourceTree = "<group>"; };
 		F38F08BE28C6890800E09E53 /* Credits.rtf */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
+		F3B2490B28CCB0C600562023 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		F3B2492228CCD19100562023 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3B2492B28CCD21700562023 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F3B2492D28CCD2A200562023 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3B2493128CCD2B900562023 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		F3B2493628CCD3E300562023 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		F3B2493B28CCD47E00562023 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +126,7 @@
 			children = (
 				6079F3B423D07AC400B735B2 /* BlockiKit.h */,
 				6079F3B523D07AC400B735B2 /* Info.plist */,
+				F3B2493C28CCD47E00562023 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -124,8 +134,9 @@
 		606630EE23D1EAE5001AABA6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				6079F3A423D07A8800B735B2 /* Info.plist */,
 				6079F3A523D07A8800B735B2 /* BlockiExtension.entitlements */,
+				F3B2492228CCD19100562023 /* Info.plist */,
+				F3B2492C28CCD21700562023 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -133,10 +144,12 @@
 		606630EF23D1EB05001AABA6 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				6079F38B23D0761900B735B2 /* Assets.xcassets */,
-				6079F39023D0761900B735B2 /* Info.plist */,
 				6079F39123D0761900B735B2 /* Blocki.entitlements */,
+				F3B2492D28CCD2A200562023 /* Info.plist */,
 				F38F08BE28C6890800E09E53 /* Credits.rtf */,
+				6079F38B23D0761900B735B2 /* Assets.xcassets */,
+				F3B2493228CCD2B900562023 /* InfoPlist.strings */,
+				F3B2493728CCD3E300562023 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -317,7 +330,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3B2493528CCD3E300562023 /* Localizable.strings in Resources */,
 				6079F38C23D0761900B735B2 /* Assets.xcassets in Resources */,
+				F3B2493028CCD2B900562023 /* InfoPlist.strings in Resources */,
 				F38F08BF28C6890800E09E53 /* Credits.rtf in Resources */,
 				6079F38F23D0761900B735B2 /* Main.storyboard in Resources */,
 			);
@@ -327,6 +342,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3B2492A28CCD21700562023 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,6 +350,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3B2493A28CCD47E00562023 /* InfoPlist.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,8 +403,41 @@
 			isa = PBXVariantGroup;
 			children = (
 				6079F38E23D0761900B735B2 /* Base */,
+				F3B2490B28CCB0C600562023 /* en */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F3B2492C28CCD21700562023 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F3B2492B28CCD21700562023 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F3B2493228CCD2B900562023 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F3B2493128CCD2B900562023 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		F3B2493728CCD3E300562023 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F3B2493628CCD3E300562023 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+		F3B2493C28CCD47E00562023 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F3B2493B28CCD47E00562023 /* en */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

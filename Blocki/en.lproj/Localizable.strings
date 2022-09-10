@@ -1,0 +1,8 @@
+/* Error that occurs, when the blocker list file could not be created inside the application group's container. */
+"Could not create blocker list." = "Could not create blocker list.";
+
+/* Text indicating that the extension is enabled in Safari. */
+"The extension is enabled." = "The extension is enabled.";
+
+/* Text indicating that the extension is not enabled in Safari. */
+"The extension is not enabled." = "The extension is not enabled.";

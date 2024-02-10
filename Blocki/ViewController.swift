@@ -76,16 +76,10 @@ class ViewController: NSViewController {
 		super.viewDidLoad()
 
 		// If there is no blocker list yet, create an empty one.
-		let manager = FileManager.default
-
-		if !manager.fileExists(atPath: Blocki.blockerListUrl.path) {
-			let blockerList = Data("[]".utf8)
-			let created = manager.createFile(atPath: Blocki.blockerListUrl.path, contents: blockerList)
-			if !created {
-				let localizedMessage = NSLocalizedString("Could not create blocker list.", comment: "Error that occurs, when the blocker list file could not be created inside the application group's container.")
-				signal(message: localizedMessage, isError: true)
-				return
-			}
+		do {
+			try Blocki.initializeBlockList()
+		} catch {
+			self.signal(error: error)
 		}
 
 		// Check whether the extension is enabled automatically.

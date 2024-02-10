@@ -19,4 +19,9 @@ public class Blocki {
 
 	public static var blockerListUrl = container.appendingPathComponent("blockerList.json", isDirectory: false)
 
+	public static func initializeBlockList() throws {
+		if !FileManager.default.fileExists(atPath: blockerListUrl.path) {
+			try Data("[]".utf8).write(to: blockerListUrl)
+		}
+	}
 }

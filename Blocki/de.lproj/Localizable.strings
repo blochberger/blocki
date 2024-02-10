@@ -1,8 +1,0 @@
-/* Error that occurs, when the blocker list file could not be created inside the application group's container. */
-"Could not create blocker list." = "Regelwerk konnte nicht erstellt werden.";
-
-/* Text indicating that the extension is enabled in Safari. */
-"The extension is enabled." = "Die Erweiterung ist aktiviert.";
-
-/* Text indicating that the extension is not enabled in Safari. */
-"The extension is not enabled." = "Die Erweiterung ist nicht aktiviert.";

@@ -1,0 +1,118 @@
+{
+  "sourceLanguage" : "en-US",
+  "strings" : {
+    "Content blocker documentation…" : {
+      "localizations" : {
+        "de-DE" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Content Blocker Dokumentation…"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Content blocker documentation…"
+          }
+        }
+      }
+    },
+    "Edit rules…" : {
+      "localizations" : {
+        "de-DE" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Regeln bearbeiten…"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Edit rules…"
+          }
+        }
+      }
+    },
+    "Refresh state" : {
+      "localizations" : {
+        "de-DE" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Status aktualisieren"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Refresh state"
+          }
+        }
+      }
+    },
+    "Reload rules in Safari" : {
+      "localizations" : {
+        "de-DE" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Regeln in Safari neu laden"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Reload rules in Safari"
+          }
+        }
+      }
+    },
+    "The extension is enabled." : {
+      "localizations" : {
+        "de-DE" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Die Browser-Erweiterung ist aktiv."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The extension is enabled."
+          }
+        }
+      }
+    },
+    "The extension is not enabled." : {
+      "localizations" : {
+        "de-DE" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Die Browser-Erweiterung ist nicht aktiv."
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "The extension is not enabled."
+          }
+        }
+      }
+    },
+    "View source code on GitHub…" : {
+      "localizations" : {
+        "de-DE" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Quelltext auf GitHub ansehen…"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "View source code on GitHub…"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

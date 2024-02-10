@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F32E77092B778E9D00EC0D16 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = F32E77082B778E9D00EC0D16 /* Credits.rtf */; };
+		F32E770B2B779AD000EC0D16 /* Credits.rtf in Resources */ = {isa = PBXBuildFile; fileRef = F32E770D2B779AD000EC0D16 /* Credits.rtf */; };
+		F32E77122B779C0B00EC0D16 /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = F32E77112B779C0B00EC0D16 /* InfoPlist.xcstrings */; };
+		F32E77142B779C0B00EC0D16 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = F32E77132B779C0B00EC0D16 /* Localizable.xcstrings */; };
+		F32E77162B779C0B00EC0D16 /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = F32E77152B779C0B00EC0D16 /* InfoPlist.xcstrings */; };
 		F353DCBD2B7779690071971C /* BlockiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F353DCBC2B7779690071971C /* BlockiApp.swift */; };
 		F353DCBF2B7779690071971C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F353DCBE2B7779690071971C /* ContentView.swift */; };
 		F353DCC12B77796B0071971C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F353DCC02B77796B0071971C /* Assets.xcassets */; };
@@ -66,8 +69,14 @@
 
 /* Begin PBXFileReference section */
 		F32E77072B77873A00EC0D16 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F32E77082B778E9D00EC0D16 /* Credits.rtf */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.rtf; path = Credits.rtf; sourceTree = "<group>"; };
 		F32E770A2B7796B800EC0D16 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		F32E770C2B779AD000EC0D16 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = Base; path = Base.lproj/Credits.rtf; sourceTree = "<group>"; };
+		F32E770E2B779AD500EC0D16 /* en-US */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = "en-US"; path = "en-US.lproj/Credits.rtf"; sourceTree = "<group>"; };
+		F32E770F2B779AD600EC0D16 /* en-GB */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = "en-GB"; path = "en-GB.lproj/Credits.rtf"; sourceTree = "<group>"; };
+		F32E77102B779AD700EC0D16 /* de-DE */ = {isa = PBXFileReference; lastKnownFileType = text.rtf; name = "de-DE"; path = "de-DE.lproj/Credits.rtf"; sourceTree = "<group>"; };
+		F32E77112B779C0B00EC0D16 /* InfoPlist.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = InfoPlist.xcstrings; sourceTree = "<group>"; };
+		F32E77132B779C0B00EC0D16 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		F32E77152B779C0B00EC0D16 /* InfoPlist.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = InfoPlist.xcstrings; sourceTree = "<group>"; };
 		F353DCB92B7779690071971C /* Blocki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blocki.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F353DCBC2B7779690071971C /* BlockiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockiApp.swift; sourceTree = "<group>"; };
 		F353DCBE2B7779690071971C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -149,8 +158,10 @@
 			children = (
 				F353DCC02B77796B0071971C /* Assets.xcassets */,
 				F353DCC52B77796B0071971C /* Blocki.entitlements */,
-				F32E77082B778E9D00EC0D16 /* Credits.rtf */,
+				F32E770D2B779AD000EC0D16 /* Credits.rtf */,
 				F32E77072B77873A00EC0D16 /* Info.plist */,
+				F32E77112B779C0B00EC0D16 /* InfoPlist.xcstrings */,
+				F32E77132B779C0B00EC0D16 /* Localizable.xcstrings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -186,6 +197,7 @@
 			children = (
 				F353DCDA2B7779E30071971C /* ContentBlocker.entitlements */,
 				F353DCD92B7779E30071971C /* Info.plist */,
+				F32E77152B779C0B00EC0D16 /* InfoPlist.xcstrings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -308,8 +320,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F32E77122B779C0B00EC0D16 /* InfoPlist.xcstrings in Resources */,
 				F353DCC12B77796B0071971C /* Assets.xcassets in Resources */,
-				F32E77092B778E9D00EC0D16 /* Credits.rtf in Resources */,
+				F32E77142B779C0B00EC0D16 /* Localizable.xcstrings in Resources */,
+				F32E770B2B779AD000EC0D16 /* Credits.rtf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,6 +331,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F32E77162B779C0B00EC0D16 /* InfoPlist.xcstrings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -371,6 +386,20 @@
 			targetProxy = F353DCFA2B777A190071971C /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F32E770D2B779AD000EC0D16 /* Credits.rtf */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F32E770C2B779AD000EC0D16 /* Base */,
+				F32E770E2B779AD500EC0D16 /* en-US */,
+				F32E770F2B779AD600EC0D16 /* en-GB */,
+				F32E77102B779AD700EC0D16 /* de-DE */,
+			);
+			name = Credits.rtf;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		F353DCC62B77796B0071971C /* Debug */ = {

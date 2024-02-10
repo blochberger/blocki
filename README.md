@@ -16,7 +16,7 @@ Recommendation: Use Blocki in combination with other content blockers, such as [
 
   **Affects**
 
-  macOS 12.5.1
+  macOS 12.5.1 to macOS <13.6.4 (validated that it is fixed in 13.6.4; did not try out versions in between)
 
   **Details**
 

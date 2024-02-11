@@ -9,7 +9,17 @@ struct ContentView: View {
     @State private var extensionIsEnabled: Bool = false
     @State private var error: Error? = nil
 
+    var canReloadRules: Bool {
+        extensionIsEnabled && !isReloadingRules
+    }
+
+    var canRefreshState: Bool {
+        !isRefreshingState
+    }
+
     func reloadRules() {
+        precondition(canReloadRules)
+
         error = nil
         isReloadingRules = true
         SFContentBlockerManager.reloadContentBlocker(withIdentifier: Blocki.extensionIdentifier) {
@@ -28,6 +38,8 @@ struct ContentView: View {
     }
 
     func refreshState() {
+        precondition(canRefreshState)
+
         error = nil
         isRefreshingState = true
         SFContentBlockerManager.getStateOfContentBlocker(withIdentifier: Blocki.extensionIdentifier) {
@@ -70,7 +82,7 @@ struct ContentView: View {
             Button(action: refreshState) {
                 Image(systemName: "arrow.clockwise")
                 Text("Refresh state").frame(maxWidth: .infinity)
-            }.disabled(isRefreshingState)
+            }.disabled(!canRefreshState)
             Button(action: editBlocklist) {
                 Image(systemName: "pencil")
                 Text("Edit rules…").frame(maxWidth: .infinity)
@@ -78,7 +90,7 @@ struct ContentView: View {
             Button(action: reloadRules) {
                 Image(systemName: "safari")
                 Text("Reload rules in Safari").frame(maxWidth: .infinity)
-            }.disabled(!extensionIsEnabled || isReloadingRules)
+            }.disabled(!canReloadRules)
         }
         .padding()
         .onAppear {

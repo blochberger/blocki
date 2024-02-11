@@ -67,15 +67,15 @@ struct ContentView: View {
                 }
             }
             Spacer()
-            Button(action: { refreshState() }) {
+            Button(action: refreshState) {
                 Image(systemName: "arrow.clockwise")
                 Text("Refresh state").frame(maxWidth: .infinity)
             }.disabled(isRefreshingState)
-            Button(action: { editBlocklist() }) {
+            Button(action: editBlocklist) {
                 Image(systemName: "pencil")
                 Text("Edit rules…").frame(maxWidth: .infinity)
             }
-            Button(action: { reloadRules() }) {
+            Button(action: reloadRules) {
                 Image(systemName: "safari")
                 Text("Reload rules in Safari").frame(maxWidth: .infinity)
             }.disabled(!extensionIsEnabled || isReloadingRules)

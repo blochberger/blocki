@@ -1,7 +1,6 @@
+import BlockiKit
 import SafariServices
 import SwiftUI
-
-import BlockiKit
 
 struct ContentView: View {
     @State private var blocki: Blocki? = nil

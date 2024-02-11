@@ -78,7 +78,7 @@ struct ContentView: View {
             Button(action: { reloadExtension() }) {
                 Image(systemName: "safari")
                 Text("Reload rules in Safari").frame(maxWidth: .infinity)
-            }.disabled(isReloadingRules)
+            }.disabled(!extensionIsEnabled || isReloadingRules)
         }
         .padding()
         .onAppear {

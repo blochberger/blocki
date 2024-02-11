@@ -9,7 +9,7 @@ struct ContentView: View {
     @State private var extensionIsEnabled: Bool = false
     @State private var error: Error? = nil
 
-    func reloadExtension() {
+    func reloadRules() {
         error = nil
         isReloadingRules = true
         SFContentBlockerManager.reloadContentBlocker(withIdentifier: Blocki.extensionIdentifier) {
@@ -75,7 +75,7 @@ struct ContentView: View {
                 Image(systemName: "pencil")
                 Text("Edit rules…").frame(maxWidth: .infinity)
             }
-            Button(action: { reloadExtension() }) {
+            Button(action: { reloadRules() }) {
                 Image(systemName: "safari")
                 Text("Reload rules in Safari").frame(maxWidth: .infinity)
             }.disabled(!extensionIsEnabled || isReloadingRules)

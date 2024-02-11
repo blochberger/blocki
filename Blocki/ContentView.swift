@@ -26,14 +26,13 @@ struct ContentView: View {
             optionalError in
 
             DispatchQueue.main.async {
-                if let error = optionalError {
-                    self.error = error
+                guard let error = optionalError else {
                     self.isReloadingRules = false
+                    self.refreshState()
                     return
                 }
-
+                self.error = error
                 self.isReloadingRules = false
-                self.refreshState()
             }
         }
     }
@@ -47,13 +46,12 @@ struct ContentView: View {
             (optionalState, optionalError) in
 
             DispatchQueue.main.async {
-                if let error = optionalError {
-                    self.error = error
+                guard let state = optionalState else {
+                    precondition(optionalError != nil)
+                    self.error = optionalError
                     self.isRefreshingState = false
                     return
                 }
-
-                let state = optionalState!
                 self.extensionIsEnabled = state.isEnabled
                 self.isRefreshingState = false
             }

@@ -7,8 +7,7 @@ struct BlockiApp: App {
             ContentView()
                 .onAppear {
                     DispatchQueue.main.async {
-                        NSApplication.shared.windows.forEach {
-                            window in
+                        for window in NSApplication.shared.windows {
                             window.titlebarAppearsTransparent = true
                             window.collectionBehavior = [.fullScreenNone]
                         }

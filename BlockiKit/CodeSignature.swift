@@ -37,7 +37,11 @@ struct CodeSignature {
         var optionalSigningInfo: CFDictionary? = nil
         let status = SecCodeCopySigningInformation(code, [], &optionalSigningInfo)
         guard status == errSecSuccess else {
-            NSLog(String(describing: Error.fromSecurityFramework(function: "SecCodeCopySigningInformation", status: status)))
+            NSLog(
+                String(
+                    describing: Error.fromSecurityFramework(function: "SecCodeCopySigningInformation", status: status)
+                )
+            )
             return [:]
         }
         guard let signingInfo = (optionalSigningInfo as NSDictionary?) else {

@@ -62,23 +62,25 @@ struct ContentView: View {
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
-                Image(systemName: isLoading
-                      ? "hourglass"
-                      : (extensionIsEnabled
-                         ? "bolt.fill"
-                         : "bolt.slash.fill")
+                Image(
+                    systemName: isLoading
+                        ? "hourglass"
+                        : (extensionIsEnabled
+                            ? "bolt.fill"
+                            : "bolt.slash.fill")
                 ).foregroundStyle(.accent)
-                Text(isLoading
-                     ? "Loading…"
-                     : (extensionIsEnabled
-                        ? "The extension is enabled."
-                        : "The extension is not enabled.")
+                Text(
+                    isLoading
+                        ? "Loading…"
+                        : (extensionIsEnabled
+                            ? "The extension is enabled."
+                            : "The extension is not enabled.")
                 )
             }
             if let error = self.error {
                 Text(error.localizedDescription).bold().foregroundStyle(.red)
                 if let helpAnchor = (error as NSError).helpAnchor {
-                    Text(helpAnchor).foregroundStyle(.red) // not localized
+                    Text(helpAnchor).foregroundStyle(.red)  // not localized
                 }
             }
             Spacer()

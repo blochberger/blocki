@@ -25,15 +25,16 @@ struct ContentView: View {
         SFContentBlockerManager.reloadContentBlocker(withIdentifier: Blocki.extensionIdentifier) {
             optionalError in
 
-            if let error = optionalError {
-                DispatchQueue.main.async {
+            DispatchQueue.main.async {
+                if let error = optionalError {
                     self.error = error
                     self.isReloadingRules = false
+                    return
                 }
-                return
+
+                self.isReloadingRules = false
+                self.refreshState()
             }
-            self.isReloadingRules = false
-            self.refreshState()
         }
     }
 
@@ -45,16 +46,14 @@ struct ContentView: View {
         SFContentBlockerManager.getStateOfContentBlocker(withIdentifier: Blocki.extensionIdentifier) {
             (optionalState, optionalError) in
 
-            if let error = optionalError {
-                DispatchQueue.main.async {
+            DispatchQueue.main.async {
+                if let error = optionalError {
                     self.error = error
                     self.isRefreshingState = false
+                    return
                 }
-                return
-            }
 
-            let state = optionalState!
-            DispatchQueue.main.async {
+                let state = optionalState!
                 self.extensionIsEnabled = state.isEnabled
                 self.isRefreshingState = false
             }

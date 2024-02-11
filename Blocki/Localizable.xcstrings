@@ -33,6 +33,22 @@
         }
       }
     },
+    "Loading…" : {
+      "localizations" : {
+        "de-DE" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Lädt…"
+          }
+        },
+        "en-GB" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Loading…"
+          }
+        }
+      }
+    },
     "Refresh state" : {
       "localizations" : {
         "de-DE" : {

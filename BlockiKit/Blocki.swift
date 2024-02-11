@@ -1,24 +1,39 @@
 import Foundation
 
-public class Blocki {
+public struct Blocki {
     public enum Error: Swift.Error {
         case blockListNotAvailable
+        case noApplicationGroup
     }
 
-    // TODO: Find value programmatically.
-    public static let extensionIdentifier = "io.github.blochberger.Blocki.ContentBlocker"
+    let applicationGroup: String
 
     // TODO: Find value programmatically.
-    public static let teamIdentifier = "Q7Y592HJR8"
+    public let extensionIdentifier = "io.github.blochberger.Blocki.ContentBlocker"
 
-    // TODO: Find value programmatically.
-    public static let applicationGroupIdentifier = "\(teamIdentifier).Blocki"
+    init(codeSignature: CodeSignature) throws {
+        for applicationGroup in codeSignature.applicationGroups {
+            if applicationGroup.hasSuffix(".Blocki") {
+                self.applicationGroup = applicationGroup
+                return
+            }
+        }
+        throw Error.noApplicationGroup
+    }
 
-    public static var container: URL = FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: applicationGroupIdentifier)!
+    public init() throws {
+        try self.init(codeSignature: CodeSignature())
+    }
 
-    public static var blockListUrl = container.appendingPathComponent("blockerList.json", isDirectory: false)
+    var groupContainer: URL {
+        FileManager.default.containerURL(forSecurityApplicationGroupIdentifier: applicationGroup)!
+    }
 
-    public static func initializeBlockList() throws {
+    public var blockListUrl: URL {
+        groupContainer.appending(component: "blockerList.json")
+    }
+
+    public func initializeBlockList() throws {
         if !FileManager.default.fileExists(atPath: blockListUrl.path) {
             try Data("[]".utf8).write(to: blockListUrl)
         }

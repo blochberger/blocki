@@ -11,6 +11,8 @@
 		F32E77122B779C0B00EC0D16 /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = F32E77112B779C0B00EC0D16 /* InfoPlist.xcstrings */; };
 		F32E77142B779C0B00EC0D16 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = F32E77132B779C0B00EC0D16 /* Localizable.xcstrings */; };
 		F32E77162B779C0B00EC0D16 /* InfoPlist.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = F32E77152B779C0B00EC0D16 /* InfoPlist.xcstrings */; };
+		F32E77182B77F31C00EC0D16 /* CodeSignature.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32E77172B77F31C00EC0D16 /* CodeSignature.swift */; };
+		F32E77192B77F45C00EC0D16 /* CodeSignature.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32E77172B77F31C00EC0D16 /* CodeSignature.swift */; };
 		F353DCBD2B7779690071971C /* BlockiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F353DCBC2B7779690071971C /* BlockiApp.swift */; };
 		F353DCBF2B7779690071971C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F353DCBE2B7779690071971C /* ContentView.swift */; };
 		F353DCC12B77796B0071971C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F353DCC02B77796B0071971C /* Assets.xcassets */; };
@@ -77,6 +79,7 @@
 		F32E77112B779C0B00EC0D16 /* InfoPlist.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = InfoPlist.xcstrings; sourceTree = "<group>"; };
 		F32E77132B779C0B00EC0D16 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
 		F32E77152B779C0B00EC0D16 /* InfoPlist.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = InfoPlist.xcstrings; sourceTree = "<group>"; };
+		F32E77172B77F31C00EC0D16 /* CodeSignature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeSignature.swift; sourceTree = "<group>"; };
 		F353DCB92B7779690071971C /* Blocki.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blocki.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F353DCBC2B7779690071971C /* BlockiApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockiApp.swift; sourceTree = "<group>"; };
 		F353DCBE2B7779690071971C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -188,6 +191,7 @@
 			children = (
 				F353DCE92B777A190071971C /* BlockiKit.h */,
 				F353DD052B777A7A0071971C /* Blocki.swift */,
+				F32E77172B77F31C00EC0D16 /* CodeSignature.swift */,
 			);
 			path = BlockiKit;
 			sourceTree = "<group>";
@@ -360,6 +364,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F353DCD82B7779E30071971C /* ContentBlockerRequestHandler.swift in Sources */,
+				F32E77192B77F45C00EC0D16 /* CodeSignature.swift in Sources */,
 				F353DD0E2B777DC80071971C /* Blocki.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -369,6 +374,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F353DD062B777A7A0071971C /* Blocki.swift in Sources */,
+				F32E77182B77F31C00EC0D16 /* CodeSignature.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

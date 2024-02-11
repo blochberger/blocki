@@ -4,25 +4,22 @@ import SwiftUI
 import BlockiKit
 
 struct ContentView: View {
+    @State private var blocki: Blocki? = nil
     @State private var isRefreshingState: Bool = false
     @State private var isReloadingRules: Bool = false
     @State private var extensionIsEnabled: Bool = false
     @State private var error: Error? = nil
 
-    var canReloadRules: Bool {
-        extensionIsEnabled && !isReloadingRules
-    }
-
-    var canRefreshState: Bool {
-        !isRefreshingState
-    }
+    var isLoading: Bool { blocki == nil }
+    var canReloadRules: Bool { !isLoading && extensionIsEnabled && !isReloadingRules }
+    var canRefreshState: Bool { !isLoading && !isRefreshingState }
 
     func reloadRules() {
         precondition(canReloadRules)
 
         error = nil
         isReloadingRules = true
-        SFContentBlockerManager.reloadContentBlocker(withIdentifier: Blocki.extensionIdentifier) {
+        SFContentBlockerManager.reloadContentBlocker(withIdentifier: blocki!.extensionIdentifier) {
             optionalError in
 
             DispatchQueue.main.async {
@@ -42,7 +39,7 @@ struct ContentView: View {
 
         error = nil
         isRefreshingState = true
-        SFContentBlockerManager.getStateOfContentBlocker(withIdentifier: Blocki.extensionIdentifier) {
+        SFContentBlockerManager.getStateOfContentBlocker(withIdentifier: blocki!.extensionIdentifier) {
             (optionalState, optionalError) in
 
             DispatchQueue.main.async {
@@ -59,15 +56,25 @@ struct ContentView: View {
     }
 
     func editBlocklist() {
-        NSWorkspace.shared.open(Blocki.blockListUrl)
+        precondition(!isLoading)
+        NSWorkspace.shared.open(blocki!.blockListUrl)
     }
-
 
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
-                Image(systemName: extensionIsEnabled ? "bolt.fill" : "bolt.slash.fill").foregroundStyle(.accent)
-                Text(extensionIsEnabled ? "The extension is enabled." : "The extension is not enabled.")
+                Image(systemName: isLoading
+                      ? "hourglass"
+                      : (extensionIsEnabled
+                         ? "bolt.fill"
+                         : "bolt.slash.fill")
+                ).foregroundStyle(.accent)
+                Text(isLoading
+                     ? "Loading…"
+                     : (extensionIsEnabled
+                        ? "The extension is enabled."
+                        : "The extension is not enabled.")
+                )
             }
             if let error = self.error {
                 Text(error.localizedDescription).bold().foregroundStyle(.red)
@@ -83,7 +90,7 @@ struct ContentView: View {
             Button(action: editBlocklist) {
                 Image(systemName: "pencil")
                 Text("Edit rules…").frame(maxWidth: .infinity)
-            }
+            }.disabled(isLoading)
             Button(action: reloadRules) {
                 Image(systemName: "safari")
                 Text("Reload rules in Safari").frame(maxWidth: .infinity)
@@ -92,12 +99,26 @@ struct ContentView: View {
         .padding()
         .onAppear {
             // If there is no blocker list yet, create an empty one.
-            do {
-                try Blocki.initializeBlockList()
-            } catch {
-                self.error = error
+            DispatchQueue.global().async {
+                let blocki: Blocki
+                do {
+                    blocki = try Blocki()
+                } catch {
+                    DispatchQueue.main.async {
+                        self.error = error
+                    }
+                    return
+                }
+                DispatchQueue.main.async {
+                    self.blocki = blocki
+                    do {
+                        try blocki.initializeBlockList()
+                    } catch {
+                        self.error = error
+                    }
+                    self.refreshState()
+                }
             }
-            refreshState()
         }
     }
 }

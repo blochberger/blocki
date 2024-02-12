@@ -6,6 +6,7 @@ struct BlockiApp: App {
         WindowGroup {
             ContentView()
                 .onAppear {
+                    NSWindow.allowsAutomaticWindowTabbing = false
                     DispatchQueue.main.async {
                         for window in NSApplication.shared.windows {
                             window.titlebarAppearsTransparent = true

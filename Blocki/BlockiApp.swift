@@ -14,6 +14,12 @@ struct BlockiApp: App {
                     }
                 }
         }.commands {
+            // Disable some superfluous menu entries
+            CommandGroup(replacing: .systemServices) {}
+            CommandGroup(replacing: .newItem) {}
+            CommandGroup(replacing: .pasteboard) {}
+            CommandGroup(replacing: .undoRedo) {}
+            // Help
             CommandGroup(replacing: .help) { HelpMenu() }
         }
     }

@@ -18,7 +18,7 @@ struct BlockiApp: App {
                     DispatchQueue.main.async {
                         for window in NSApplication.shared.windows {
                             window.titlebarAppearsTransparent = true
-                            window.collectionBehavior = [.fullScreenNone]
+                            window.collectionBehavior = [.primary, .fullScreenNone]
                         }
                     }
                 }

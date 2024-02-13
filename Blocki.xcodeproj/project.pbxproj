@@ -25,6 +25,7 @@
 		F353DD062B777A7A0071971C /* Blocki.swift in Sources */ = {isa = PBXBuildFile; fileRef = F353DD052B777A7A0071971C /* Blocki.swift */; };
 		F353DD0E2B777DC80071971C /* Blocki.swift in Sources */ = {isa = PBXBuildFile; fileRef = F353DD052B777A7A0071971C /* Blocki.swift */; };
 		F353DD102B7780460071971C /* HelpMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = F353DD0F2B7780460071971C /* HelpMenu.swift */; };
+		F3883C6F2B7BD1C400967946 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = F3883C6E2B7BD1C400967946 /* PrivacyInfo.xcprivacy */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -94,6 +95,7 @@
 		F353DCE92B777A190071971C /* BlockiKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BlockiKit.h; sourceTree = "<group>"; };
 		F353DD052B777A7A0071971C /* Blocki.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blocki.swift; sourceTree = "<group>"; };
 		F353DD0F2B7780460071971C /* HelpMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpMenu.swift; sourceTree = "<group>"; };
+		F3883C6E2B7BD1C400967946 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +167,7 @@
 				F32E77072B77873A00EC0D16 /* Info.plist */,
 				F32E77112B779C0B00EC0D16 /* InfoPlist.xcstrings */,
 				F32E77132B779C0B00EC0D16 /* Localizable.xcstrings */,
+				F3883C6E2B7BD1C400967946 /* PrivacyInfo.xcprivacy */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -327,6 +330,7 @@
 				F32E77122B779C0B00EC0D16 /* InfoPlist.xcstrings in Resources */,
 				F353DCC12B77796B0071971C /* Assets.xcassets in Resources */,
 				F32E77142B779C0B00EC0D16 /* Localizable.xcstrings in Resources */,
+				F3883C6F2B7BD1C400967946 /* PrivacyInfo.xcprivacy in Resources */,
 				F32E770B2B779AD000EC0D16 /* Credits.rtf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

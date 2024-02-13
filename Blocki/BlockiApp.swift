@@ -22,7 +22,9 @@ struct BlockiApp: App {
                         }
                     }
                 }
-        }.commands {
+        }
+        .windowResizability(.contentMinSize)
+        .commands {
             // Disable some superfluous menu entries
             CommandGroup(replacing: .systemServices) {}
             CommandGroup(replacing: .newItem) {}

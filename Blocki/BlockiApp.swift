@@ -10,18 +10,18 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 struct BlockiApp: App {
     @NSApplicationDelegateAdaptor private var appDelegate: AppDelegate
 
+    @MainActor
+    func applyWindowStyle() {
+        NSWindow.allowsAutomaticWindowTabbing = false
+        for window in NSApplication.shared.windows {
+            window.titlebarAppearsTransparent = true
+            window.collectionBehavior = [.primary, .fullScreenNone]
+        }
+    }
+
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .onAppear {
-                    NSWindow.allowsAutomaticWindowTabbing = false
-                    DispatchQueue.main.async {
-                        for window in NSApplication.shared.windows {
-                            window.titlebarAppearsTransparent = true
-                            window.collectionBehavior = [.primary, .fullScreenNone]
-                        }
-                    }
-                }
+            ContentView().task { applyWindowStyle() }
         }
         .windowResizability(.contentMinSize)
         .commands {

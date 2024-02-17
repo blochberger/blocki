@@ -98,7 +98,7 @@ struct ContentView: View {
             }.disabled(!canReloadRules)
         }
         .padding()
-        .onAppear {
+        .task {
             // If there is no blocker list yet, create an empty one.
             DispatchQueue.global().async {
                 let blocki: Blocki

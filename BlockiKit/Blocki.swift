@@ -8,8 +8,9 @@ public struct Blocki {
 
     let applicationGroup: String
 
-    // TODO: Find value programmatically.
-    public let extensionIdentifier = "io.github.blochberger.Blocki.ContentBlocker"
+    public var extensionIdentifier: String {
+        Bundle.main.bundleIdentifier! + ".ContentBlocker"
+    }
 
     init(codeSignature: CodeSignature) throws {
         for applicationGroup in codeSignature.applicationGroups {

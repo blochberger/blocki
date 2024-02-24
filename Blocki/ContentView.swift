@@ -13,50 +13,57 @@ struct ContentView: View {
     var canReloadRules: Bool { !isLoading && extensionIsEnabled && !isReloadingRules }
     var canRefreshState: Bool { !isLoading && !isRefreshingState }
 
-    func reloadRules() {
+    @Sendable
+    func reloadRules() async {
         precondition(canReloadRules)
+
+        defer { isReloadingRules = false }
 
         error = nil
         isReloadingRules = true
-        SFContentBlockerManager.reloadContentBlocker(withIdentifier: blocki!.extensionIdentifier) {
-            optionalError in
-
-            DispatchQueue.main.async {
-                guard let error = optionalError else {
-                    self.isReloadingRules = false
-                    self.refreshState()
-                    return
-                }
-                self.error = error
-                self.isReloadingRules = false
-            }
+        do {
+            try await SFContentBlockerManager.reloadContentBlocker(withIdentifier: blocki!.extensionIdentifier)
+        } catch {
+            self.error = error
+            return
         }
+        await refreshState()
     }
 
-    func refreshState() {
+    @Sendable
+    func refreshState() async {
         precondition(canRefreshState)
+
+        defer { isRefreshingState = false }
 
         error = nil
         isRefreshingState = true
-        SFContentBlockerManager.getStateOfContentBlocker(withIdentifier: blocki!.extensionIdentifier) {
-            (optionalState, optionalError) in
-
-            DispatchQueue.main.async {
-                guard let state = optionalState else {
-                    precondition(optionalError != nil)
-                    self.error = optionalError
-                    self.isRefreshingState = false
-                    return
-                }
-                self.extensionIsEnabled = state.isEnabled
-                self.isRefreshingState = false
-            }
+        let state: SFContentBlockerState
+        do {
+            state = try await SFContentBlockerManager.stateOfContentBlocker(withIdentifier: blocki!.extensionIdentifier)
+        } catch {
+            self.error = error
+            return
         }
+        extensionIsEnabled = state.isEnabled
     }
 
     func editBlocklist() {
         precondition(!isLoading)
         NSWorkspace.shared.open(blocki!.blockListUrl)
+    }
+
+    @Sendable
+    func initializeBlocki() async {
+        do {
+            blocki = try Blocki()
+            // If there is no blocker list yet, create an empty one.
+            try blocki!.initializeBlockList()
+            await refreshState()
+        } catch {
+            self.error = error
+            return
+        }
     }
 
     var body: some View {
@@ -84,7 +91,7 @@ struct ContentView: View {
                 }
             }
             Spacer()
-            Button(action: refreshState) {
+            Button(action: { Task(operation: refreshState) }) {
                 Image(systemName: "arrow.clockwise")
                 Text("Refresh state").frame(maxWidth: .infinity)
             }.disabled(!canRefreshState)
@@ -92,35 +99,13 @@ struct ContentView: View {
                 Image(systemName: "pencil")
                 Text("Edit rules…").frame(maxWidth: .infinity)
             }.disabled(isLoading)
-            Button(action: reloadRules) {
+            Button(action: { Task(operation: reloadRules) }) {
                 Image(systemName: "safari")
                 Text("Reload rules in Safari").frame(maxWidth: .infinity)
             }.disabled(!canReloadRules)
         }
         .padding()
-        .task {
-            // If there is no blocker list yet, create an empty one.
-            DispatchQueue.global().async {
-                let blocki: Blocki
-                do {
-                    blocki = try Blocki()
-                } catch {
-                    DispatchQueue.main.async {
-                        self.error = error
-                    }
-                    return
-                }
-                DispatchQueue.main.async {
-                    self.blocki = blocki
-                    do {
-                        try blocki.initializeBlockList()
-                    } catch {
-                        self.error = error
-                    }
-                    self.refreshState()
-                }
-            }
-        }
+        .task(initializeBlocki)
         .frame(minWidth: 300, minHeight: 150)
     }
 }

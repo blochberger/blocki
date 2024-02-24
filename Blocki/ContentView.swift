@@ -22,7 +22,7 @@ struct ContentView: View {
         error = nil
         isReloadingRules = true
         do {
-            try await SFContentBlockerManager.reloadContentBlocker(withIdentifier: blocki!.extensionIdentifier)
+            try await SFContentBlockerManager.reloadContentBlocker(withIdentifier: Blocki.extensionIdentifier)
         } catch {
             self.error = error
             return
@@ -40,7 +40,7 @@ struct ContentView: View {
         isRefreshingState = true
         let state: SFContentBlockerState
         do {
-            state = try await SFContentBlockerManager.stateOfContentBlocker(withIdentifier: blocki!.extensionIdentifier)
+            state = try await SFContentBlockerManager.stateOfContentBlocker(withIdentifier: Blocki.extensionIdentifier)
         } catch {
             self.error = error
             return

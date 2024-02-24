@@ -8,7 +8,7 @@ public struct Blocki {
 
     let applicationGroup: String
 
-    public var extensionIdentifier: String {
+    public static var extensionIdentifier: String {
         Bundle.main.bundleIdentifier! + ".ContentBlocker"
     }
 

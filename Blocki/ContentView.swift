@@ -1,5 +1,4 @@
 import BlockiKit
-import SafariServices
 import SwiftUI
 
 struct ContentView: View {
@@ -22,7 +21,7 @@ struct ContentView: View {
         error = nil
         isReloadingRules = true
         do {
-            try await SFContentBlockerManager.reloadContentBlocker(withIdentifier: Blocki.extensionIdentifier)
+            try await Blocki.reloadBlocklist()
         } catch {
             self.error = error
             return
@@ -38,14 +37,12 @@ struct ContentView: View {
 
         error = nil
         isRefreshingState = true
-        let state: SFContentBlockerState
         do {
-            state = try await SFContentBlockerManager.stateOfContentBlocker(withIdentifier: Blocki.extensionIdentifier)
+            extensionIsEnabled = try await Blocki.isEnabled()
         } catch {
             self.error = error
             return
         }
-        extensionIsEnabled = state.isEnabled
     }
 
     func editBlocklist() {

@@ -1,4 +1,5 @@
 import Foundation
+import SafariServices
 
 public struct Blocki {
     public enum Error: Swift.Error {
@@ -10,6 +11,15 @@ public struct Blocki {
 
     public static var extensionIdentifier: String {
         Bundle.main.bundleIdentifier! + ".ContentBlocker"
+    }
+
+    public static func isEnabled() async throws -> Bool {
+        let state = try await SFContentBlockerManager.stateOfContentBlocker(withIdentifier: extensionIdentifier)
+        return state.isEnabled
+    }
+
+    public static func reloadBlocklist() async throws {
+        try await SFContentBlockerManager.reloadContentBlocker(withIdentifier: extensionIdentifier)
     }
 
     init(codeSignature: CodeSignature) throws {

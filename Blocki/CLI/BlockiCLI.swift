@@ -8,6 +8,9 @@ extension FileHandle: TextOutputStream {
 }
 
 struct UI: AsyncParsableCommand {
+    // Ignore system arguments for UI applications, such as
+    // `-NSShowNonLocalizedStrings`, `-ApplePersistenceIgnoreState`, etc.
+    @Argument(parsing: .captureForPassthrough) var arguments: [String] = []
 }
 
 struct Status: AsyncParsableCommand {

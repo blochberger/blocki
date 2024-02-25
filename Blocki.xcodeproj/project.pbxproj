@@ -26,6 +26,9 @@
 		F353DD0E2B777DC80071971C /* Blocki.swift in Sources */ = {isa = PBXBuildFile; fileRef = F353DD052B777A7A0071971C /* Blocki.swift */; };
 		F353DD102B7780460071971C /* HelpMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = F353DD0F2B7780460071971C /* HelpMenu.swift */; };
 		F3883C6F2B7BD1C400967946 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = F3883C6E2B7BD1C400967946 /* PrivacyInfo.xcprivacy */; };
+		F38E13FE2B7E866400F016EE /* ArgumentParser in Frameworks */ = {isa = PBXBuildFile; productRef = F38E13FD2B7E866400F016EE /* ArgumentParser */; };
+		F38E14022B7E876E00F016EE /* BlockiCLI.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38E14012B7E876E00F016EE /* BlockiCLI.swift */; };
+		F38E14052B81E70B00F016EE /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = F38E14032B80C57600F016EE /* main.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +99,8 @@
 		F353DD052B777A7A0071971C /* Blocki.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Blocki.swift; sourceTree = "<group>"; };
 		F353DD0F2B7780460071971C /* HelpMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpMenu.swift; sourceTree = "<group>"; };
 		F3883C6E2B7BD1C400967946 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		F38E14012B7E876E00F016EE /* BlockiCLI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlockiCLI.swift; sourceTree = "<group>"; };
+		F38E14032B80C57600F016EE /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +108,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F38E13FE2B7E866400F016EE /* ArgumentParser in Frameworks */,
 				F353DCFC2B777A190071971C /* BlockiKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,9 +157,9 @@
 			isa = PBXGroup;
 			children = (
 				F353DCCB2B7779990071971C /* Supporting Files */,
-				F353DCBC2B7779690071971C /* BlockiApp.swift */,
-				F353DCBE2B7779690071971C /* ContentView.swift */,
-				F353DD0F2B7780460071971C /* HelpMenu.swift */,
+				F38E14072B89E81600F016EE /* CLI */,
+				F38E14062B89E7F500F016EE /* UI */,
+				F38E14032B80C57600F016EE /* main.swift */,
 			);
 			path = Blocki;
 			sourceTree = "<group>";
@@ -209,6 +215,24 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F38E14062B89E7F500F016EE /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				F353DCBC2B7779690071971C /* BlockiApp.swift */,
+				F353DCBE2B7779690071971C /* ContentView.swift */,
+				F353DD0F2B7780460071971C /* HelpMenu.swift */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		F38E14072B89E81600F016EE /* CLI */ = {
+			isa = PBXGroup;
+			children = (
+				F38E14012B7E876E00F016EE /* BlockiCLI.swift */,
+			);
+			path = CLI;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -240,6 +264,9 @@
 				F353DCDC2B7779E30071971C /* PBXTargetDependency */,
 			);
 			name = Blocki;
+			packageProductDependencies = (
+				F38E13FD2B7E866400F016EE /* ArgumentParser */,
+			);
 			productName = Blocki;
 			productReference = F353DCB92B7779690071971C /* Blocki.app */;
 			productType = "com.apple.product-type.application";
@@ -311,6 +338,9 @@
 				"en-US",
 			);
 			mainGroup = F353DCB02B7779690071971C;
+			packageReferences = (
+				F38E13FC2B7E866400F016EE /* XCRemoteSwiftPackageReference "swift-argument-parser" */,
+			);
 			productRefGroup = F353DCBA2B7779690071971C /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -358,7 +388,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				F353DD102B7780460071971C /* HelpMenu.swift in Sources */,
+				F38E14052B81E70B00F016EE /* main.swift in Sources */,
 				F353DCBF2B7779690071971C /* ContentView.swift in Sources */,
+				F38E14022B7E876E00F016EE /* BlockiCLI.swift in Sources */,
 				F353DCBD2B7779690071971C /* BlockiApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -746,6 +778,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F38E13FC2B7E866400F016EE /* XCRemoteSwiftPackageReference "swift-argument-parser" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-argument-parser.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.3.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F38E13FD2B7E866400F016EE /* ArgumentParser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F38E13FC2B7E866400F016EE /* XCRemoteSwiftPackageReference "swift-argument-parser" */;
+			productName = ArgumentParser;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F353DCB12B7779690071971C /* Project object */;
 }

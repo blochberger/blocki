@@ -6,7 +6,6 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
 }
 
-@main
 struct BlockiApp: App {
     @NSApplicationDelegateAdaptor private var appDelegate: AppDelegate
 

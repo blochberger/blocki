@@ -9,3 +9,20 @@ Most content blockers for Safari only offer fixed filter lists that are bundled 
 For now, you can only edit rule set by modifying the `blockerList.json` file, as described in [Creating a content blocker](https://developer.apple.com/documentation/safariservices/creating_a_content_blocker).
 
 Recommendation: Use Blocki in combination with other content blockers, such as [Ka-Block!](https://github.com/dgraham/Ka-Block) or [Hush](https://github.com/oblador/hush).
+
+## Command-line usage
+
+The application executable can be used as a command-line utility:
+
+```sh
+$ /Applications/Blocki.app/Contents/MacOS/Blocki status
+The extension is enabled.
+```
+
+Note that the `status` command return `0` if the extension is enabled and `1` if it is disabled.
+
+It can also be used for reloading the block list in Safari:
+
+```sh
+$ /Applications/Blocki.app/Contents/MacOS/Blocki reload
+```

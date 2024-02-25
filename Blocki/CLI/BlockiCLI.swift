@@ -16,7 +16,7 @@ struct UI: AsyncParsableCommand {
 struct Status: AsyncParsableCommand {
     func run() async throws {
         let isEnabled = try await Blocki.isEnabled()
-        print(isEnabled ? "Extension is enabled." : "Extension is not enabled.")
+        print(isEnabled ? "The extension is enabled." : "The extension is not enabled.")
         throw isEnabled ? ExitCode.success : ExitCode.failure
     }
 }

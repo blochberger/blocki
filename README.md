@@ -12,7 +12,7 @@ Recommendation: Use Blocki in combination with other content blockers, such as [
 
 ## Command-line usage
 
-The application executable can be used as a command-line utility. Ieally, you set up an alias for it, such as:
+The application executable can be used as a command-line utility. Ideally, you set up an alias for it, such as:
 
 ```
 alias blocki=/Applications/Blocki.app/Contents/MacOS/Blocki

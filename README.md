@@ -12,11 +12,14 @@ Recommendation: Use Blocki in combination with other content blockers, such as [
 
 ## Command-line usage
 
-The application executable can be used as a command-line utility. Ideally, you set add a symbolic link somewhere in `PATH`, for example:
+The application executable can be used as a command-line utility. Ideally, you set up a shell alias for it, such as:
 
 ```
-ln -s /Applications/Blocki.app/Contents/MacOS/Blocki /urs/local/bin/blocki
+alias blocki=/Applications/Blocki.app/Contents/MacOS/Blocki
 ```
+
+> [!WARNING]
+> Using a symbolic link for invoking the command-line tool does currently not work, see #10.
 
 ```console
 $ blocki status

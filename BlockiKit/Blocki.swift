@@ -10,7 +10,10 @@ public struct Blocki {
     let applicationGroup: String
 
     public static var extensionIdentifier: String {
-        Bundle.main.bundleIdentifier! + ".ContentBlocker"
+        guard let bundleIdentifier = Bundle.main.bundleIdentifier else {
+            fatalError("Could not find bundle identifier. The app may have been launched through a symbolic link, which is currently not supported, see #10.")
+        }
+        return bundleIdentifier + ".ContentBlocker"
     }
 
     public static func isEnabled() async throws -> Bool {

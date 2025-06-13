@@ -19,7 +19,7 @@ alias blocki=/Applications/Blocki.app/Contents/MacOS/Blocki
 ```
 
 > [!WARNING]
-> Using a symbolic link for invoking the command-line tool does currently not work, see #10.
+> Using a symbolic link for invoking the command-line tool does currently not work, see [#10](https://github.com/blochberger/blocki/issues/10).
 
 ```console
 $ blocki status

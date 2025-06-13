@@ -29,7 +29,7 @@ struct Reload: AsyncParsableCommand {
 
 struct BlockiCLI: AsyncParsableCommand {
     static let configuration = CommandConfiguration(
-        commandName: CommandLine.arguments.first,
+        commandName: "blocki",
         subcommands: [UI.self, Status.self, Reload.self],
         defaultSubcommand: UI.self)
 }

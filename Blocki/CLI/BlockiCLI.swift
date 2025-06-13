@@ -30,6 +30,7 @@ struct Reload: AsyncParsableCommand {
 struct BlockiCLI: AsyncParsableCommand {
     static let configuration = CommandConfiguration(
         commandName: "blocki",
+        version: Bundle.main.infoDictionary!["CFBundleShortVersionString"] as! String,
         subcommands: [UI.self, Status.self, Reload.self],
         defaultSubcommand: UI.self)
 }
